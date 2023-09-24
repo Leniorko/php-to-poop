@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "PHP to poop",
+  "description": "Turns out every text mention of PHP to poop emoji",
+  "version": "0.0.1",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "js": ["scripts/poopify.js"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "main.html",
+    "default_icon": "hello_extensions.png"
+  }
+}
